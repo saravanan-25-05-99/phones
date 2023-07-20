@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+    <h1>TWO NUMBERS</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+    <label for="fname">Number :</label>
+    <br>
+    <input type="text" id="number" name="number" value="{{number}}" />
+    <br>
+    <br>
+    <select id="method" name="method">
+        <option value="">select</option>
+        <option value="primenumber" {% if method == "primenumber" %} selected {% endif %}> Primenumber </option>
+        <option value="addoreven" {% if method == "addoreven" %} selected {% endif %}> addoreven </option>
+        <option value="factorial" {% if method == "mul" %} selected {% endif %}> factorial </option>
+        
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="submit" />
+</form>
+<br>
+<br>
+<p>result:<br> {{result}}</p>
+  
+</body>
+</html>
