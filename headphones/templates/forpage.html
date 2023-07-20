@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+</head>
+<body>
+    
+<table>
+<tr>
+    <th>s.no</th>
+    <th>name</th>
+    <th>score</th>
+</tr>
+{% for name in students.mark %}
+<tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{name.name}}</td>
+    <td>{{name.score}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

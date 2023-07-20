@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+</head>
+<body>
+    
+    Hello {{ data.name3 }}!<br>
+
+{% if data.score3 > 80 %}
+you pass high mark {{ data.name3 }}<br>
+{% else %}
+you pass in low mark {{ data.name3 }}<br>
+{% endif %}
+You mark  {{ data.score3 }} out of {{ max_score }}
+</body>
+</html>

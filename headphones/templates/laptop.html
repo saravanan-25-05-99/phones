@@ -1,0 +1,54 @@
+<Html>  
+    <head>   
+        <h1 style="text-align:center;"><u>STUDENT REGISTRATION FORM</h1></u>
+    <title>  
+    Registration Page  
+    </title>  
+    </head>  
+      
+     <body style="background-color:powderblue;">
+        {% block content %}
+    <form action="" method="post" style="font-family:courier;">  
+            {% csrf_token %}
+    <label> Laptop Name: </label>         
+    <input type="text" name="laptopname" size="20" /><br> <br>  
+    <label> Laptop Model: </label>         
+    <input type="text" name="laptopmodel" size="20"/> <br> <br>
+    <label>Price:</label>
+    <input type="text" name="price" size="20"/> <br> <br>
+    <label>Color:</label>
+    <input type="text" name="color" size="20"/> <br> <br>
+
+
+
+
+
+
+      
+    <label> Color : </label>   
+    <select id="color" name="color">
+    <option value="BCA"{% if course == "BCA" %} selected {% endif %}>BCA</option>  
+    <option value="BBA"{% if course == "BBA" %} selected {% endif %}>BBA</option>   
+    <option value="MBA"{% if course == "MBA" %} selected {% endif %}>MBA</option>  
+    <option value="MCA"{% if course == "MCA" %} selected {% endif %}>MCA</option>  
+    </select><br> <br>
+    <label>Gender :</label><br>  
+    <input type="radio" name="gender"{% if gender == "male" %} selected {% endif %} value ="male"/> Male <br>  
+    <input type="radio" name="gender"{% if gender == "female" %} selected {% endif %} value ="female"/> Female <br> <br>
+
+    <label>Phone :</label>  
+    <input type="text" name="phone" size="10"/><br>  <br>
+    <label>Address:</label> 
+    <br>  
+    <textarea cols="40" rows="5" name="address">  
+    </textarea>  
+    <br> <br>  
+    <label>Email:</label>  
+    <input type="email" id="email" name="email"/> <br>    
+    <br>
+    <input type="submit" value="Submit"/>  
+</form>
+    
+    {% endblock %}
+    </body>  
+    </html>  
